@@ -1,0 +1,31 @@
+<html>
+<head>
+    <title>Welcome!</title>
+</head>
+<body>
+<table border="1" class="demoTable" style="height: 54px;">
+    <thead>
+    <tr>
+        <td>ticker</td>
+        <td>date</td>
+        <td>type</td>
+        <td>shares</td>
+        <td>price</td>
+        <td>amount</td>
+    </tr>
+    </thead>
+    <tbody>
+    <#list transactions as transaction>
+    <tr>
+        <td>${transaction.ticker}</td>
+        <td>${transaction.date!"N/A"}</td>
+        <td>${transaction.type}</td>
+        <td>${transaction.shares}</td>
+        <td>${transaction.price}</td>
+        <td>${transaction.amount}</td>
+    </tr>
+    </#list>
+    </tbody>
+</table>
+</body>
+</html>
